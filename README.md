@@ -1,4 +1,4 @@
-# Ember-calendly
+# Ember-calendly [![Build Status](https://travis-ci.org/levanto-financial/ember-calendly.svg?branch=master)](https://travis-ci.org/levanto-financial/ember-calendly)
 
 Easy [Calendly](calendly.com) integration for Ember.js apps.
 
