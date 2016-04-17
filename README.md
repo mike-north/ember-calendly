@@ -63,3 +63,5 @@ Calendly.closePopupWidget();
 * `ember build`
 
 For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).
+
+&copy; Levanto Financial Inc, All Rights Reserved
