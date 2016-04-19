@@ -1,8 +1,6 @@
 import Ember from 'ember';
-import layout from '../templates/components/calendly-popup-widget';
 
 export default Ember.Component.extend({
-  layout,
   color: '#00a2ff',
   text: 'Schedule time with me',
   branding: false,

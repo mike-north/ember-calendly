@@ -1,5 +1,4 @@
 import Ember from 'ember';
-import layout from '../templates/components/calendly-inline';
 
 const { computed, Component, Handlebars } = Ember;
 
