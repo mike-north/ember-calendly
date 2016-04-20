@@ -6,6 +6,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('popup-widget');
+  this.route('popup-text');
+  this.route('inline');
 });
 
 export default Router;

@@ -1,0 +1,15 @@
+* {
+  font-family: sans-serif;
+}
+
+li {
+  height: 40px;
+}
+
+a {
+  padding: 10px;
+}
+a.active {
+  background: #eee;
+  font-weight: bold;
+}

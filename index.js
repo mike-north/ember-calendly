@@ -2,5 +2,16 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-calendly'
+  name: 'calendly',
+
+  contentFor: function(type, config) {
+    var content = '';
+
+    if (type === 'head') {
+      content = '<script type="text/javascript" src="https://calendly.com/assets/external/widget.js"></script>' +
+        '<link href="https://calendly.com/assets/external/widget.css" rel="stylesheet">';
+    }
+
+    return content;
+  }
 };
