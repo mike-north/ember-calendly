@@ -37,6 +37,15 @@ Then you have three options for embedding calendly.
   url='https://calendly.com/mnorth'}}
 ```
 
+## Other stuff
+
+You may also import Calendly as an ES6 module
+
+```js
+import Calendly from 'calendly';
+
+Calendly.closePopupWidget();
+```
 
 ## Running
 
