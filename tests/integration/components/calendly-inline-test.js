@@ -13,7 +13,7 @@ test('it renders', function(assert) {
   this.set('styleProps', {
     'min-width': '320px',
     height: '580px'
-  })
+  });
   this.render(hbs`{{calendly-inline
     url='https://calendly.com/mnorth'
     style=styleProps}}`);
