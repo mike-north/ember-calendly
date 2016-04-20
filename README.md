@@ -2,6 +2,8 @@
 
 Easy [Calendly](calendly.com) integration for Ember.js apps.
 
+**[FASTBOOT](http://ember-fastboot.com) COMPATIBLE**
+
 ## Use
 
 ```

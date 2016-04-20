@@ -1,35 +1,34 @@
----
 language: node_js
 node_js:
-  - "0.12"
-
+- '0.12'
 sudo: false
-
 cache:
   directories:
-    - node_modules
-
+  - node_modules
 env:
-  - EMBER_TRY_SCENARIO=default
-  - EMBER_TRY_SCENARIO=ember-1.13
-  - EMBER_TRY_SCENARIO=ember-release
-  - EMBER_TRY_SCENARIO=ember-beta
-  - EMBER_TRY_SCENARIO=ember-canary
-
+- EMBER_TRY_SCENARIO=default
+- EMBER_TRY_SCENARIO=ember-1.13
+- EMBER_TRY_SCENARIO=ember-release
+- EMBER_TRY_SCENARIO=ember-beta
+- EMBER_TRY_SCENARIO=ember-canary
 matrix:
   fast_finish: true
   allow_failures:
-    - env: EMBER_TRY_SCENARIO=ember-canary
-
+  - env: EMBER_TRY_SCENARIO=ember-canary
 before_install:
-  - export PATH=/usr/local/phantomjs-2.0.0/bin:$PATH
-  - "npm config set spin false"
-  - "npm install -g npm@^2"
-
+- export PATH=/usr/local/phantomjs-2.0.0/bin:$PATH
+- npm config set spin false
+- npm install -g npm@^2
 install:
-  - npm install -g bower
-  - npm install
-  - bower install
-
+- npm install -g bower
+- npm install
+- bower install
 script:
-  - ember try $EMBER_TRY_SCENARIO test
+- ember try $EMBER_TRY_SCENARIO test
+deploy:
+  provider: heroku
+  api_key:
+    secure: RMRf5rlqx772jckuee5w+RS4m/HdRIp7yyTPrbC7/9Kth5nQBUJ1O9JV11ICmkZZbvRD0VtMdikcedJgnC/ADS2urVURzljuZAPtmkii8qfew8OnSwS4pHBBlhqF5a9hero3pCSNAwnh8B8e2VQO6CIGdnV6PgYYcjfar3HNsAmPks23YiNhgRcSKW4oxI8spglyK35WT+UgVz75nAvg+X1OQGwDT7q4JqhFBgwHlqX2tGh1ZIRyp8L2CZKc5l/cuHf59fEXa0sri5YOs1cUM4Qer5tEV93gIE5YxKCqJqAc4/xzhMO0xm0YZHhlJnSmgw9wCNhfYyVRI3Di9r3t2fBz2cx8WmNXrxzyWommAoSTjzzDhVghoYzea5Fs5C5O7sep6Kt0CU+mfWO1/yuRUYyBzAMNgjwemyIo6h5lVb+Ahr3GpwdCDusr6wRJNfvoB/BMdoANmiBAaZ4GtGv+EFpOiCLKZnFw4EF9cAu06IH4q1CWyAWL7YiycFaprUR5jpituSuVhqBNXkfdJUVQKknWW4v33/et7DUPC3aQa2lJQ+wsVbgxHfXAXM422LHYYE8XPciVCZ/BmJneS7bjdQp2mHBnwl1iJb9R6tkZln1zV+Z3U06ivlkpuORakDnrasTlbNNP3Xl3pyXRzatY9VXdRstTfYvZrCKicGK+85w=
+  app: ember-calendly-demo
+  on:
+    repo: levanto-financial/ember-calendly
