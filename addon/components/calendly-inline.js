@@ -7,8 +7,8 @@ export default Component.extend({
   classNames: ['calendly-inline-widget'],
   attributeBindings: ['url:data-url', 'styleString:style'],
   styleString: computed(function() {
-    const style = this.get('style');
-    const styleAttrs = [];
+    let style = this.get('style');
+    let styleAttrs = [];
     for (var k in style) {
       styleAttrs.push(`${k}: ${style[k]}`);
     }
@@ -16,7 +16,7 @@ export default Component.extend({
   }).volatile(),
   didInsertElement() {
     this._super(...arguments);
-    const e = this.$()[0];
+    let e = this.$()[0];
     e.removeChild(e.childNodes[0]);
     Calendly.createInlineWidgets();
   }

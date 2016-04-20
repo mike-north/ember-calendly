@@ -8,7 +8,7 @@ moduleForComponent('calendly-popup-text', 'Integration | Component | calendly po
 test('it renders', function(assert) {
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });
-  const done = assert.async();
+  let done = assert.async();
 
   this.render(hbs`{{calendly-popup-text url='https://calendly.com/mnorth'}}`);
 
