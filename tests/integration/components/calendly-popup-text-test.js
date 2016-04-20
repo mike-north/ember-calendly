@@ -26,8 +26,7 @@ test('it renders', function(assert) {
   this.$('a').click();
 
   setTimeout(() => {
-    assert.equal(document.querySelectorAll('iframe').length, 1, 'Iframe spawned on click');
-    assert.equal(document.querySelectorAll('iframe')[0].src, 'https://calendly.com/mnorth', 'Iframe spawned on click');
+    assert.equal(document.querySelectorAll('iframe[src="https://calendly.com/mnorth"]').length, 1, 'Iframe spawned on click');
     done();
-  }, 500);
+  }, 1000);
 });
