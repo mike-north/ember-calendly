@@ -1,12 +1,40 @@
 # Ember-calendly
 
-This README outlines the details of collaborating on this Ember addon.
+Easy [Calendly](calendly.com) integration for Ember.js apps.
 
-## Installation
+## Use
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+```
+ember install ember-calendly
+```
+
+Then you have three options for embedding calendly.
+
+### Inline
+
+```hbs
+{{calendly-inline
+  url='https://calendly.com/mnorth'
+  style=(hash
+    min-width='320px'
+    height='580px')}}
+```
+
+### Popup Widget
+
+```hbs
+{{calendly-popup-widget
+  url='https://calendly.com/mnorth'}}
+```
+
+
+### Popup Text
+
+```hbs
+{{calendly-popup-text
+  url='https://calendly.com/mnorth'}}
+```
+
 
 ## Running
 
