@@ -32,3 +32,6 @@ deploy:
   app: ember-calendly-demo
   on:
     repo: levanto-financial/ember-calendly
+notifications:
+  slack:
+    secure: UiwQwnjW+Ru1PoKeTfavbHpwH0iqeIo2wItER20jcSOCAOVyjxHmu67+bkBKF3oBUc3V66w1fyXCs0rfiAUjW4g0m2HKa9C1TyyHJWTqBFevfG648OAbPkr+9MiVxItRjOt6oc3+/oQ8/btQWoEB1XJ9mkxOYHGoIyjCKXWSKEpK8/gPSihMkQjugPyaiQneReg4GEOf4VXQ/ZpRZoSoBZ/08W12dn7SF4ufAnYSXN2WsDg3FhqcP8vFjtwkuZKMHZf6kiU5VfHxkLcA0UgX71kX70BLeE4bzOjwbFLGL2uPBWH8SZPP7NiC5RwpBUXhIBlLjnz83ipctwyjEcku4UbeVY3JatsfX3Ai1/rLIpeXztCHD7hWPL5APZEDPQExbml+i3F/Ri699tw6uFDT+rOzq5jJsC5K4jXEl/MUqm+N30Nio/NqqiU4wTayx+kEshXJRifz0xyAAqsk56DWjhWM+MyZJ4ePjhADva9JwNe3BCE8/TCxjQOhD4HjyYs4+Qpx5h7FfUQx3MVxj09aY5qjjM/WwSqRRN2nW4YcbKLe0PYEIesI7px3CY2Hb+u1nnjlzxGWTTlY4mF74Kyb6qlHqd/OSephbrvG+Ijp9uGtnh2r04g/kzxChd60//wNjyAfd04ih+OqidhMWlTJZDEYRggiIdG5Hvx/DtJX4R4=
