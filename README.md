@@ -1,5 +1,4 @@
-# Ember-calendly [![Build Status](https://travis-ci.org/levanto-financial/ember-calendly.svg?branch=master)](https://travis-ci.org/levanto-financial/ember-calendly) [![Ember Observer Score](https://emberobserver.com/badges/ember-calendly.svg)](https://emberobserver.com/addons/ember-calendly)
- [![npm version](https://badge.fury.io/js/ember-calendly.svg)](https://badge.fury.io/js/ember-calendly) [![Code Climate](https://codeclimate.com/github/levanto-financial/ember-calendly/badges/gpa.svg)](https://codeclimate.com/github/levanto-financial/ember-calendly)
+# Ember-calendly [![Build Status](https://travis-ci.org/levanto-financial/ember-calendly.svg?branch=master)](https://travis-ci.org/levanto-financial/ember-calendly) [![Ember Observer Score](https://emberobserver.com/badges/ember-calendly.svg)](https://emberobserver.com/addons/ember-calendly) [![npm version](https://badge.fury.io/js/ember-calendly.svg)](https://badge.fury.io/js/ember-calendly) [![Code Climate](https://codeclimate.com/github/levanto-financial/ember-calendly/badges/gpa.svg)](https://codeclimate.com/github/levanto-financial/ember-calendly)
 
 Easy [Calendly](https://calendly.com/) integration for Ember.js apps.
 
