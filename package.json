@@ -37,11 +37,15 @@
     "ember-resolver": "^2.0.3",
     "ember-suave": "3.0.1",
     "ember-sublime": "0.0.8",
-    "ember-try": "^0.2.2",
     "loader.js": "^4.0.1"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "calendar",
+    "calendly",
+    "appointment", 
+    "schedule",
+    "meeting"
   ],
   "dependencies": {
     "ember-cli-babel": "^5.1.6",
