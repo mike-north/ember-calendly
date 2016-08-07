@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-const { computed, Component, Handlebars } = Ember;
+const { computed, Component, String: { htmlSafe } } = Ember;
 
 export default Component.extend({
   classNames: ['calendly-inline-widget'],
@@ -11,7 +11,7 @@ export default Component.extend({
     for (var k in style) {
       styleAttrs.push(`${k}: ${style[k]}`);
     }
-    return new Handlebars.SafeString(styleAttrs.join('; '));
+    return htmlSafe(styleAttrs.join('; '));
   }).volatile(),
   didInsertElement() {
     this._super(...arguments);
