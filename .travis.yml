@@ -10,8 +10,9 @@ cache:
     - node_modules
 
 env:
+  # we recommend testing LTS's and latest stable release (bonus points to beta/canary)
   - EMBER_TRY_SCENARIO=ember-1.13
-  - EMBER_TRY_SCENARIO=ember-2.4
+  - EMBER_TRY_SCENARIO=ember-lts-2.4
   - EMBER_TRY_SCENARIO=ember-release
   - EMBER_TRY_SCENARIO=ember-beta
   - EMBER_TRY_SCENARIO=ember-canary
@@ -19,29 +20,20 @@ env:
 matrix:
   fast_finish: true
   allow_failures:
-  - env: EMBER_TRY_SCENARIO=ember-beta
-  - env: EMBER_TRY_SCENARIO=ember-canary
+    - env: EMBER_TRY_SCENARIO=ember-canary
 
 before_install:
   - npm config set spin false
   - npm install -g bower
   - bower --version
   - npm install phantomjs-prebuilt
-  - phantomjs --version
+  - node_modules/phantomjs-prebuilt/bin/phantomjs --version
 
 install:
   - npm install
   - bower install
 
 script:
+  # Usually, it's ok to finish the test scenario without reverting
+  #  to the addon's original dependency state, skipping "cleanup".
   - ember try:one $EMBER_TRY_SCENARIO test --skip-cleanup
-deploy:
-  provider: heroku
-  api_key:
-    secure: RMRf5rlqx772jckuee5w+RS4m/HdRIp7yyTPrbC7/9Kth5nQBUJ1O9JV11ICmkZZbvRD0VtMdikcedJgnC/ADS2urVURzljuZAPtmkii8qfew8OnSwS4pHBBlhqF5a9hero3pCSNAwnh8B8e2VQO6CIGdnV6PgYYcjfar3HNsAmPks23YiNhgRcSKW4oxI8spglyK35WT+UgVz75nAvg+X1OQGwDT7q4JqhFBgwHlqX2tGh1ZIRyp8L2CZKc5l/cuHf59fEXa0sri5YOs1cUM4Qer5tEV93gIE5YxKCqJqAc4/xzhMO0xm0YZHhlJnSmgw9wCNhfYyVRI3Di9r3t2fBz2cx8WmNXrxzyWommAoSTjzzDhVghoYzea5Fs5C5O7sep6Kt0CU+mfWO1/yuRUYyBzAMNgjwemyIo6h5lVb+Ahr3GpwdCDusr6wRJNfvoB/BMdoANmiBAaZ4GtGv+EFpOiCLKZnFw4EF9cAu06IH4q1CWyAWL7YiycFaprUR5jpituSuVhqBNXkfdJUVQKknWW4v33/et7DUPC3aQa2lJQ+wsVbgxHfXAXM422LHYYE8XPciVCZ/BmJneS7bjdQp2mHBnwl1iJb9R6tkZln1zV+Z3U06ivlkpuORakDnrasTlbNNP3Xl3pyXRzatY9VXdRstTfYvZrCKicGK+85w=
-  app: ember-calendly-demo
-  on:
-    repo: levanto-financial/ember-calendly
-notifications:
-  slack:
-    secure: UiwQwnjW+Ru1PoKeTfavbHpwH0iqeIo2wItER20jcSOCAOVyjxHmu67+bkBKF3oBUc3V66w1fyXCs0rfiAUjW4g0m2HKa9C1TyyHJWTqBFevfG648OAbPkr+9MiVxItRjOt6oc3+/oQ8/btQWoEB1XJ9mkxOYHGoIyjCKXWSKEpK8/gPSihMkQjugPyaiQneReg4GEOf4VXQ/ZpRZoSoBZ/08W12dn7SF4ufAnYSXN2WsDg3FhqcP8vFjtwkuZKMHZf6kiU5VfHxkLcA0UgX71kX70BLeE4bzOjwbFLGL2uPBWH8SZPP7NiC5RwpBUXhIBlLjnz83ipctwyjEcku4UbeVY3JatsfX3Ai1/rLIpeXztCHD7hWPL5APZEDPQExbml+i3F/Ri699tw6uFDT+rOzq5jJsC5K4jXEl/MUqm+N30Nio/NqqiU4wTayx+kEshXJRifz0xyAAqsk56DWjhWM+MyZJ4ePjhADva9JwNe3BCE8/TCxjQOhD4HjyYs4+Qpx5h7FfUQx3MVxj09aY5qjjM/WwSqRRN2nW4YcbKLe0PYEIesI7px3CY2Hb+u1nnjlzxGWTTlY4mF74Kyb6qlHqd/OSephbrvG+Ijp9uGtnh2r04g/kzxChd60//wNjyAfd04ih+OqidhMWlTJZDEYRggiIdG5Hvx/DtJX4R4=
