@@ -13,7 +13,7 @@
   },
   "repository": "https://github.com/levanto-financial/ember-calendly.git",
   "engines": {
-    "node": ">= 0.12.0"
+    "node": ">= 4"
   },
   "author": "Mike North <michael.l.north@gmail.com> (http://mike.works)",
   "license": "MIT",
