@@ -1,3 +1,3 @@
-/*globals Calendly:true*/
+/* globals window:true */
 
-export default window.Calendly;
+export default window ? window.Calendly : {};

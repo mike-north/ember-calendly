@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import calendly from 'calendly';
 
 const { computed, Component, String: { htmlSafe } } = Ember;
 
@@ -8,15 +9,17 @@ export default Component.extend({
   styleString: computed(function() {
     let style = this.get('style');
     let styleAttrs = [];
-    for (var k in style) {
+    for (let k in style) {
       styleAttrs.push(`${k}: ${style[k]}`);
     }
     return htmlSafe(styleAttrs.join('; '));
   }).volatile(),
   didInsertElement() {
     this._super(...arguments);
-    let e = this.$()[0];
-    e.removeChild(e.childNodes[0]);
-    Calendly.createInlineWidgets();
+    let [e] = this.$();
+    if (e && e.childNodes.length) {
+      e.removeChild(e.childNodes[0]);
+    }
+    calendly.createInlineWidgets();
   }
 });

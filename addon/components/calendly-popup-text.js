@@ -1,13 +1,16 @@
 import Ember from 'ember';
+import calendly from 'calendly';
 
-export default Ember.Component.extend({
+const { Component } = Ember;
+
+export default Component.extend({
   tagName: 'a',
   click(e) {
-    Calendly.showPopupWidget('https://calendly.com/mnorth');
+    calendly.showPopupWidget(this.get('url'));
     e.preventDefault();
   },
   willDestroyElement() {
     this._super(...arguments);
-    Calendly.closePopupWidget();
+    calendly.closePopupWidget();
   }
 });
