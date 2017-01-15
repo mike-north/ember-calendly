@@ -16,10 +16,12 @@ export default Component.extend({
   }).volatile(),
   didInsertElement() {
     this._super(...arguments);
-    let [e] = this.$();
-    if (e && e.childNodes.length) {
-      e.removeChild(e.childNodes[0]);
+    if (this.$().length) {
+      let [e] = this.$();
+      if (e && e.childNodes.length) {
+        e.removeChild(e.childNodes[0]);
+      }
+      calendly.createInlineWidgets();
     }
-    calendly.createInlineWidgets();
   }
 });
