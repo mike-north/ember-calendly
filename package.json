@@ -53,7 +53,7 @@
   ],
   "dependencies": {
     "ember-cli-babel": "^5.1.7",
-    "ember-cli-htmlbars": "^1.0.10"
+    "ember-cli-htmlbars": "^1.1.1"
   },
   "ember-addon": {
     "demoURL": "https://mike.works/ember-calendly",
