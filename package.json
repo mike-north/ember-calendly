@@ -38,7 +38,7 @@
     "ember-suave": "4.0.1",
     "ember-sublime": "0.0.8",
     "eslint": "^3.12.2",
-    "eslint-plugin-babel": "^3.3.0",
+    "eslint-plugin-babel": "^4.1.0",
     "eslint-plugin-ember-suave": "^1.0.0",
     "eslint-plugin-promise": "^3.4.0",
     "loader.js": "^4.0.11"
