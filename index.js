@@ -1,11 +1,11 @@
-/* jshint node: true */
+/* eslint-env node */
 'use strict';
 
 module.exports = {
   name: 'calendly',
 
-  contentFor: function(type, config) {
-    var content = '';
+  contentFor(type, config) {
+    let content = '';
 
     if (type === 'head') {
       content = '<script async type="text/javascript" src="https://calendly.com/assets/external/widget.js"></script>' +
