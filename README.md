@@ -1,5 +1,7 @@
 # Ember-calendly [![Build Status](https://travis-ci.org/mike-north/ember-calendly.svg?branch=master)](https://travis-ci.org/mike-north/ember-calendly) [![Ember Observer Score](https://emberobserver.com/badges/ember-calendly.svg)](https://emberobserver.com/addons/ember-calendly) [![npm version](https://badge.fury.io/js/ember-calendly.svg)](https://badge.fury.io/js/ember-calendly) [![Code Climate](https://codeclimate.com/github/mike-north/ember-calendly/badges/gpa.svg)](https://codeclimate.com/github/mike-north/ember-calendly)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/mike-north/ember-calendly.svg)](https://greenkeeper.io/)
+
 Easy [Calendly](https://calendly.com/) integration for Ember.js apps.
 
 **[FASTBOOT](http://ember-fastboot.com) COMPATIBLE**
