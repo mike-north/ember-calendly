@@ -1,6 +1,6 @@
 {
   "name": "ember-calendly",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Calendly integration for Ember.js apps",
   "directories": {
     "doc": "doc",
