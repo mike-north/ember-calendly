@@ -1,7 +1,8 @@
-import Ember from 'ember';
+// @ts-check
+import Component from '@ember/component';
+import { computed } from '@ember/object';
+import { htmlSafe } from '@ember/string';
 import calendly from 'calendly';
-
-const { computed, Component, String: { htmlSafe } } = Ember;
 
 export default Component.extend({
   classNames: ['calendly-inline-widget'],
