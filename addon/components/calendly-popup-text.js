@@ -1,9 +1,9 @@
-import Ember from 'ember';
+// @ts-check
+import Component from '@ember/component';
 import calendly from 'calendly';
 
-const { Component } = Ember;
-
 export default Component.extend({
+  url: '',
   tagName: 'a',
   click(e) {
     calendly.showPopupWidget(this.get('url'));

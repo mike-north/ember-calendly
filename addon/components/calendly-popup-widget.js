@@ -1,7 +1,5 @@
-import Ember from 'ember';
+import Component from '@ember/component';
 import calendly from 'calendly';
-
-const { Component } = Ember;
 
 export default Component.extend({
   color: '#00a2ff',
