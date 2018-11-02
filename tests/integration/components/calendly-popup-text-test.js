@@ -12,7 +12,12 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{calendly-popup-text url='https://calendly.com/mnorth'}}`);
 
-  assert.equal(this.$().text().trim(), '');
+  assert.equal(
+    this.$()
+      .text()
+      .trim(),
+    ''
+  );
 
   // Template block usage:
   this.render(hbs`
@@ -21,12 +26,20 @@ test('it renders', function(assert) {
     {{/calendly-popup-text}}
   `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(
+    this.$()
+      .text()
+      .trim(),
+    'template block text'
+  );
 
   this.$('a').click();
-
   setTimeout(() => {
-    assert.equal(document.querySelectorAll('iframe[src="https://calendly.com/mnorth"]').length, 1, 'Iframe spawned on click');
+    assert.equal(
+      document.querySelectorAll('iframe[src^="https://calendly.com/mnorth"]').length,
+      1,
+      'Iframe spawned on click'
+    );
     done();
   }, 1000);
 });

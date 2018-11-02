@@ -17,8 +17,18 @@ test('it renders', function(assert) {
     url='https://calendly.com/mnorth'
     style=styleProps}}`);
 
-  assert.equal(this.$().text().trim(), '');
+  assert.equal(
+    this.$()
+      .text()
+      .trim(),
+    ''
+  );
 
   assert.equal(this.$('iframe').length, 1, 'Iframe has spawned');
-  assert.equal(this.$('iframe').attr('src'), 'https://calendly.com/mnorth');
+  assert.equal(
+    this.$('iframe')
+      .attr('src')
+      .split('?')[0],
+    'https://calendly.com/mnorth'
+  );
 });
