@@ -18,7 +18,7 @@
   "author": "Mike North <michael.l.north@gmail.com> (http://mike.works)",
   "license": "MIT",
   "devDependencies": {
-    "@types/ember": "2.8.4",
+    "@types/ember": "3.0.25",
     "babel-eslint": "10.0.1",
     "broccoli-asset-rev": "2.6.0",
     "ember-ci": "0.1.3",
