@@ -1,1 +1,1 @@
-export { default } from 'calendly/components/calendly-popup-widget';
+export { default } from 'ember-calendly/components/calendly-popup-widget';

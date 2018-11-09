@@ -1,1 +1,1 @@
-export { default } from 'calendly/components/calendly-inline';
+export { default } from 'ember-calendly/components/calendly-inline';

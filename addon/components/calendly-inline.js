@@ -2,7 +2,7 @@
 import Component from '@ember/component';
 import { computed } from '@ember/object';
 import { htmlSafe } from '@ember/string';
-import calendly from 'calendly';
+import calendly from 'ember-calendly';
 
 export default Component.extend({
   classNames: ['calendly-inline-widget'],
