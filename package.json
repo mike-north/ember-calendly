@@ -47,7 +47,7 @@
     "ember-source": "3.5.1",
     "ember-sublime": "0.0.9",
     "ember-try": "1.1.0",
-    "eslint": "5.8.0",
+    "eslint": "5.9.0",
     "eslint-plugin-babel": "5.2.1",
     "eslint-plugin-ember": "5.2.0",
     "eslint-plugin-ember-suave": "1.0.0",
