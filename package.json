@@ -67,7 +67,7 @@
     "meeting"
   ],
   "dependencies": {
-    "ember-cli-babel": "6.11.0",
+    "ember-cli-babel": "6.17.2",
     "ember-cli-htmlbars": "3.0.1"
   },
   "ember-addon": {
