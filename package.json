@@ -52,7 +52,7 @@
     "eslint-plugin-ember-suave": "1.0.0",
     "eslint-plugin-node": "8.0.0",
     "eslint-plugin-promise": "4.0.1",
-    "husky": "1.2.0",
+    "husky": "1.2.1",
     "loader.js": "4.7.0",
     "semantic-release": "15.12.4"
   },
