@@ -10,7 +10,8 @@ module.exports = {
 
     if (type === 'head') {
       content =
-        '<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>';
+        '<script async type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>' +
+        '<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">';
     }
 
     return content;
