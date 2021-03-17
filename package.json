@@ -65,8 +65,8 @@
     "meeting"
   ],
   "dependencies": {
-    "ember-cli-babel": "7.24.0",
-    "ember-cli-htmlbars": "5.3.2"
+    "ember-cli-babel": "7.25.0",
+    "ember-cli-htmlbars": "5.6.5"
   },
   "ember-addon": {
     "demoURL": "https://mike.works/ember-calendly",
