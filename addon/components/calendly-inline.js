@@ -22,7 +22,16 @@ export default Component.extend({
       if (e && e.childNodes.length) {
         e.removeChild(e.childNodes[0]);
       }
-      calendly.createInlineWidgets();
+
+      if (calendly._autoLoadInlineWidgets) {
+        calendly._autoLoadInlineWidgets();
+        return;
+      }
+
+      if (calendly.createInlineWidgets) {
+        calendly.createInlineWidgets();
+        return;
+      }
     }
   }
 });
